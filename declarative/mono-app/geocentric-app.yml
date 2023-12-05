@@ -23,3 +23,7 @@ spec:
     automated:
       prune: true
       selfHeal: true
+postSync:
+    - name: run-post-sync-job
+      command: ["/bin/bash", "-c"]
+      args: ["kubectl apply -f ./declarative/manifests/geocentric-model/post-sync-job.yml"]

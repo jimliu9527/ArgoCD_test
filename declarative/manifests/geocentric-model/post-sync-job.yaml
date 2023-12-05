@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: post-sync-job
+  namespace: geocentric-model
+spec:
+  template:
+    spec:
+      containers:
+      - name: post-sync-container
+        image: jimliu9527/playwright-test:v1
+        # Add other container settings and commands as needed
+      restartPolicy: Never
