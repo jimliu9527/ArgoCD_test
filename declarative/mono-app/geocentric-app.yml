@@ -37,9 +37,9 @@ spec:
     spec:
       containers:
       - name: post-sync-container
-        image: jimliu9527/playwright-cloud-filtering:v1
+        image: jimliu9527/playwright-cloud-filtering:v2
         imagePullPolicy: Always
         command: ["/bin/sh", "-c"]
-        args: ["sleep 180; npm run stg; npx http-server ./playwright-report -p 8080; sleep 300; pkill http-server"]
+        args: ["npm run stg && npx playwright show-report"]
       restartPolicy: Never
   backoffLimit: 0
