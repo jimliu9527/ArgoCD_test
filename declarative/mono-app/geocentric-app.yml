@@ -40,6 +40,6 @@ spec:
         image: jimliu9527/playwright-cloud-filtering:v1
         imagePullPolicy: Always
         command: ["/bin/sh", "-c"]
-        args: ["sleep 180; npm run stg; npx http-server ./playwright-report -p 8080"]
+        args: ["sleep 180; npm run stg; npx http-server ./playwright-report -p 8080; sleep 300; pkill http-server"]
       restartPolicy: Never
   backoffLimit: 0
