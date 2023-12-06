@@ -14,6 +14,6 @@ spec:
         image: jimliu9527/playwright-cloud-filtering:v1
         imagePullPolicy: Always
         command: ["/bin/sh", "-c"]
-        args: ["npm run stg && npx playwright show-report"]
+        args: ["npm run stg"]
       restartPolicy: Never
   backoffLimit: 0
